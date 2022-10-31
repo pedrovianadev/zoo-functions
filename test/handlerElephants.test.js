@@ -15,7 +15,7 @@ describe('Testes da função HandlerElephants', () => {
   });
   it('retorna a popularidade dos elefantes', () => {
     // eslint-disable-next-line no-unused-expressions
-    expect(handlerElephants('popularity')).toBe >= 5;
+    expect(handlerElephants('popularity')).toBe(5);
   });
   it('retorna um array com a relação de dias em que é possível visitar os elefantes', () => {
     expect(handlerElephants('availability')).toStrictEqual(['Friday', 'Saturday', 'Sunday', 'Tuesday']);
