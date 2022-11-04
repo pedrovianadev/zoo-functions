@@ -1,5 +1,5 @@
-const { species } = require("../data/zoo_data");
-const data = require("../data/zoo_data");
+const { species } = require('../data/zoo_data');
+const data = require('../data/zoo_data');
 
 function countAnimals(animal) {
   if (animal === undefined) {
@@ -9,7 +9,7 @@ function countAnimals(animal) {
     }, {});
   }
   const specie = species.find(
-    (specie2) => specie2.name === animal.specie
+    (specie2) => specie2.name === animal.specie,
   ).residents;
   if (animal.sex) {
     return specie.filter((specie2) => specie2.sex === animal.sex).length;
