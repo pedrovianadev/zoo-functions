@@ -1,5 +1,4 @@
 const data = require('../data/zoo_data');
-// teste
 
 const { species, hours } = data;
 
@@ -34,11 +33,10 @@ const getWeekDays = (day) => {
   }
   const weekDays = Object.keys(hours);
   if (weekDays.includes(day)) {
-    return {
-      [day]: {
-        officeHour: `Open from ${hours[day].open}am until ${hours[day].close}pm`,
-        exhibition: nameSpecies,
-      },
+    return { [day]: {
+      officeHour: `Open from ${hours[day].open}am until ${hours[day].close}pm`,
+      exhibition: nameSpecies(day),
+    },
     };
   }
   return day;
